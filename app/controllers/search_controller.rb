@@ -1,6 +1,5 @@
 class SearchController < ApplicationController
   def index
-    # binding.pry
-    # code
+    @station = NrelFacade.create_station(params['location'])
   end
 end
