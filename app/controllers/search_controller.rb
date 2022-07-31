@@ -1,6 +1,6 @@
 class SearchController < ApplicationController
   def index
     @station = NrelFacade.create_station(params['location'])
-    # binding.pry
+    @directions = MapquestFacade.create_directions(@station.address, params['location'])
   end
 end
